@@ -22,9 +22,3 @@ def emotion_detector(text_to_analyse):
     except requests.exceptions.RequestException as e:
         return {"error": f"An error occurred while making the request: {e}"}
     return formatted_response
-
-
-def apply_none_condition(d):
-    for key, value in d.items():
-            d[key] = None
-    return d
