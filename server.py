@@ -13,7 +13,7 @@ def render_index_page():
 def dominant_emotion():
     text_to_analyze = request.args.get('textToAnalyze')
     result = emotion_detector(text_to_analyze)
-    
+    print(result)
     if result["dominant_emotion"] is None:
         return "Invalid input! Try again."
     else:
